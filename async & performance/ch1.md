@@ -711,7 +711,7 @@ ajax( "http://some.url.1", response );
 ajax( "http://some.url.2", response );
 ```
 
-We process the data set in maximum-sized chunks of 1,000 items. By doing so, we ensure a short-running "process," even if that means many more subsequent "processes," as the interleaving onto the event loop queue will give us a much more responsive (performant) site/app.
+We process the data set in maximum-sized chunks of 1,000 items. By doing so, we ensure a short-running "process", even if that means many more subsequent "processes", as the interleaving onto the event loop queue will give us a much more responsive (performant) site/app.
 
 Of course, we're not interaction-coordinating the ordering of any of these "processes," so the order of results in `res` won't be predictable. If ordering was required, you'd need to use interaction techniques like those we discussed earlier, or ones we will cover in later chapters of this book.
 
